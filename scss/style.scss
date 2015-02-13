@@ -48,8 +48,8 @@ a {
         margin-bottom: 20px;
     }
     h4 {
-        font-size: em(18);
-        font-weight:normal;
+        font-size: em(16);
+        font-weight:500;
     }
     p {
         margin-bottom: 20px;
@@ -76,12 +76,30 @@ a {
         color:$light-gray-clr;
         text-align:right;
     }
-    .content {
-        font-size: em(13);
-        color: $text-clr;
-        ul {
-            margin-left: 20px;
-            margin-bottom:20px;
+}
+
+.content {
+    font-size: em(13);
+    color: $text-clr;
+    ul {
+        margin-left: 20px;
+        margin-bottom:20px;
+    }
+}
+
+.skills-list {
+    font-size:0;
+    margin-bottom:20px;
+    li {
+        display:inline-block;
+        font-size: 13px;
+        color: $light-gray-clr;
+        &:after {
+            content: ',';
+            margin-right:5px;
+        }
+        &:last-child:after {
+            content:'.';
         }
     }
 }
