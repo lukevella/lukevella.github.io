@@ -1,0 +1,24 @@
+{
+  "name": "lukevella.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lukevella/lukevella.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lukevella/lukevella.github.io/issues"
+  },
+  "homepage": "lukevella.github.io",
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-notify": "^2.2.0",
+    "gulp-sass": "^1.3.3"
+  }
+}

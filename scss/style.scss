@@ -1,0 +1,87 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,500,700);
+@import "bourbon/bourbon";
+@import "neat/neat";
+@import "partials/normalize";
+
+$light-gray-clr: #A9AEB9;
+$blue-clr: #049FE2;
+$text-clr: #4C4D4F;
+
+body {
+    font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+
+a {
+    color: $blue-clr;
+    &:hover {
+        color: lighten($blue-clr, 5%);
+    }
+}
+
+.container {
+    @include outer-container(680px);
+    @include pad(40px 40px 40px 140px);
+}
+
+.header {
+    margin-top: 100px;
+    margin-bottom: 40px;
+    .name {
+        font-size:em(24);
+        font-weight:bold;
+    }
+    .title {
+        color: $light-gray-clr;
+        font-weight:normal;
+        font-size:em(14);
+    }
+}
+
+.resume {
+    .resume-section {
+        margin-bottom:40px;
+    }
+    h3 {
+        color: $blue-clr;
+        font-size: em(18);
+        font-weight: 500;
+        margin-bottom: 20px;
+    }
+    h4 {
+        font-size: em(18);
+        font-weight:normal;
+    }
+    p {
+        margin-bottom: 20px;
+    }
+    .summary {
+        font-size: em(18);
+        color: $text-clr;
+    }
+    .subtitle {
+        font-size: em(13);
+        color:$light-gray-clr;
+        margin-bottom:10px;
+    }
+}
+
+.entry {
+    position:relative;
+    .timeframe {
+        position:absolute;
+        left:-140px;
+        top:0;
+        display:inline-block;
+        width:100px;
+        color:$light-gray-clr;
+        text-align:right;
+    }
+    .content {
+        font-size: em(13);
+        color: $text-clr;
+        ul {
+            margin-left: 20px;
+            margin-bottom:20px;
+        }
+    }
+}
