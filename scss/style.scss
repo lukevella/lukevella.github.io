@@ -9,6 +9,7 @@ $text-clr: #4C4D4F;
 
 body {
     font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    // font-size: 18px;
 }
 
 a {
@@ -19,13 +20,14 @@ a {
 }
 
 .container {
-    @include outer-container(680px);
+    @include outer-container(em(720));
     @include pad(40px 40px 40px 140px);
 }
 
 .header {
-    margin-top: 100px;
-    margin-bottom: 40px;
+    margin-top: em(100);
+    margin-bottom: em(40);
+    position:relative;
     .name {
         font-size:em(24);
         font-weight:bold;
@@ -35,24 +37,78 @@ a {
         font-weight:normal;
         font-size:em(14);
     }
+    .avatar {
+        width:em(100);
+        height:em(100);
+        display:inline-block;
+        border-radius:100%;
+        overflow:hidden;
+        left:em(-140);
+        top:em(-20);
+        img {
+            max-width:100%;
+        }
+    }
+    .download-pdf {
+        float:right;
+        padding: em(15);
+        border: 2px solid #eee;
+        font-size: em(13);
+        border-radius:3px;
+        text-decoration:none;
+        color:$light-gray-clr;
+        .document {
+            vertical-align:text-top;
+            display:inline-block;
+            width:16px;
+            height:16px;
+            background: url('../images/download.png') no-repeat;
+            background-size: 16px 32px;
+            margin-right:em(5);
+        }
+        &:hover{
+            border-color:$blue-clr;
+            color: $blue-clr;
+            .document {
+                background-position: 0 -16px;
+            }
+        }
+    }
 }
 
 .resume {
     .resume-section {
-        margin-bottom:40px;
+        margin-bottom:em(30);
     }
     h3 {
         color: $blue-clr;
         font-size: em(18);
         font-weight: 500;
-        margin-bottom: 20px;
+        margin-bottom: em(10);
     }
     h4 {
         font-size: em(16);
         font-weight:500;
+        a {
+            color: black;
+            text-decoration:none;
+            &:after {
+                content:'';
+                display:inline-block;
+                margin-left:em(5);
+                width: 12px;
+                height: 10px;
+                background: url('../images/external.png') no-repeat;
+                background-size: cover;
+            }
+            &:hover {
+                color: $blue-clr;
+                text-decoration: underline;
+            }
+        }
     }
     p {
-        margin-bottom: 20px;
+        margin-bottom: em(10);
     }
     .summary {
         font-size: em(18);
@@ -61,18 +117,19 @@ a {
     .subtitle {
         font-size: em(13);
         color:$light-gray-clr;
-        margin-bottom:10px;
+        margin-bottom:em(5);
     }
 }
 
 .entry {
     position:relative;
+    margin-bottom:em(20);
     .timeframe {
         position:absolute;
-        left:-140px;
+        left:em(-140);
         top:0;
         display:inline-block;
-        width:100px;
+        width:em(100);
         color:$light-gray-clr;
         text-align:right;
     }
@@ -82,21 +139,20 @@ a {
     font-size: em(13);
     color: $text-clr;
     ul {
-        margin-left: 20px;
-        margin-bottom:20px;
+        margin-left: em(20);
+        margin-bottom:em(10);
+        li {
+            margin-bottom:em(5);
+        }
     }
 }
 
 .skills-list {
-    font-size:0;
-    margin-bottom:20px;
+    margin-bottom:em(20);
     li {
         display:inline-block;
-        font-size: 13px;
-        color: $light-gray-clr;
         &:after {
             content: ',';
-            margin-right:5px;
         }
         &:last-child:after {
             content:'.';
