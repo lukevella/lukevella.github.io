@@ -191,6 +191,13 @@ p {
     }
 }
 
+.gallery {
+    margin-top:em(20);
+    img {
+        max-width:100%;
+    }
+}
+
 .content {
     font-size: em(13);
     color: $text-clr;
