@@ -1,0 +1,9 @@
+@include media($tablet) {
+    body {
+        font-size: 14px;
+    }
+    .resume {
+        margin-left:em(150);
+        margin-right:em(200);
+    }
+}

@@ -7,9 +7,14 @@ $light-gray-clr: #A9AEB9;
 $blue-clr: #049FE2;
 $text-clr: #4C4D4F;
 
+// Bourbon Neat Breakpoints
+$mobile: new-breakpoint(max-width 800px 8);
+$tablet: new-breakpoint(min-width 800px max-width 960px 10);
+$desktop: new-breakpoint(min-width 960px max-width 1440px 12);
+$largedesktop: new-breakpoint(min-width 1440px 16);
+
 body {
     font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-    // font-size: 18px;
 }
 
 a {
@@ -20,14 +25,59 @@ a {
 }
 
 .container {
-    @include outer-container(em(720));
-    @include pad(40px 40px 40px 140px);
+    @include pad(40px);
+}
+
+.resume {
+    position:relative;
+    max-width:em(500);
+    margin-left:em(200);
+    margin-right:em(280);
+}
+
+.social {
+    .wrapper {
+        position:fixed;
+    }
+    position: absolute;
+    width:em(200);
+    top:0;
+    right:em(-240);
+    ul {
+        list-style:none;
+        font-size:em(13);
+        li {
+            display:inline-block;
+            margin-right:em(2);
+            font-size:(16 / 13) * 1em;
+        }
+    }
+    a {
+        display:inline-block;
+        width:em(32);
+        height:em(32);
+        background-size:em(32) em(64);
+        &.linkedin {
+            background-image: url('../images/social/linkedin.png');
+        }
+        &.dribbble {
+            background-image: url('../images/social/dribbble.png');
+        }
+        &.github {
+            background-image: url('../images/social/github.png');
+        }
+        &.twitter {
+            background-image: url('../images/social/twitter.png');
+        }
+        &:hover {
+            background-position: 0 em(-32);
+        }
+    }
 }
 
 .header {
-    margin-top: em(100);
+    margin-top: em(40);
     margin-bottom: em(40);
-    position:relative;
     .name {
         font-size:em(24);
         font-weight:bold;
@@ -36,6 +86,14 @@ a {
         color: $light-gray-clr;
         font-weight:normal;
         font-size:em(14);
+    }
+    .contact {
+        position:absolute;
+        width:em(150);
+        left:em(-190);
+        top:0;
+        font-size: em(13);
+        text-align:right;
     }
     .avatar {
         width:em(100);
@@ -60,65 +118,63 @@ a {
         .document {
             vertical-align:text-top;
             display:inline-block;
-            width:16px;
-            height:16px;
+            width: (16 / 13) * 1em;
+            height:(16 / 13) * 1em;
             background: url('../images/download.png') no-repeat;
-            background-size: 16px 32px;
+            background-size: (16 / 13) * 1em (32 / 13) * 1em;
             margin-right:em(5);
         }
         &:hover{
             border-color:$blue-clr;
             color: $blue-clr;
             .document {
-                background-position: 0 -16px;
+                background-position: 0 (-16 / 13) * 1em;
             }
         }
     }
 }
 
-.resume {
-    .resume-section {
-        margin-bottom:em(30);
-    }
-    h3 {
-        color: $blue-clr;
-        font-size: em(18);
-        font-weight: 500;
-        margin-bottom: em(10);
-    }
-    h4 {
-        font-size: em(16);
-        font-weight:500;
-        a {
-            color: black;
-            text-decoration:none;
-            &:after {
-                content:'';
-                display:inline-block;
-                margin-left:em(5);
-                width: 12px;
-                height: 10px;
-                background: url('../images/external.png') no-repeat;
-                background-size: cover;
-            }
-            &:hover {
-                color: $blue-clr;
-                text-decoration: underline;
-            }
+.resume-section {
+    margin-bottom:em(30);
+}
+h3 {
+    color: $blue-clr;
+    font-size: em(18);
+    font-weight: 500;
+    margin-bottom: em(10);
+}
+h4 {
+    font-size: em(16);
+    font-weight:500;
+    a {
+        color: black;
+        text-decoration:none;
+        &:after {
+            content:'';
+            display:inline-block;
+            margin-left:em(5);
+            width: 12px;
+            height: 10px;
+            background: url('../images/external.png') no-repeat;
+            background-size: cover;
+        }
+        &:hover {
+            color: $blue-clr;
+            text-decoration: underline;
         }
     }
-    p {
-        margin-bottom: em(10);
-    }
-    .summary {
-        font-size: em(18);
-        color: $text-clr;
-    }
-    .subtitle {
-        font-size: em(13);
-        color:$light-gray-clr;
-        margin-bottom:em(5);
-    }
+}
+p {
+    margin-bottom: em(10);
+}
+.summary {
+    font-size: em(18);
+    color: $text-clr;
+}
+.subtitle {
+    font-size: em(13);
+    color:$light-gray-clr;
+    margin-bottom:em(5);
 }
 
 .entry {
@@ -159,3 +215,8 @@ a {
         }
     }
 }
+
+@import "partials/media/largedesktop";
+@import "partials/media/desktop";
+@import "partials/media/tablet";
+@import "partials/media/mobile";

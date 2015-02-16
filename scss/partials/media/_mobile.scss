@@ -1,0 +1,39 @@
+@include media($mobile) {
+    body {
+        font-size: 14px;
+    }
+    .container{
+        padding: 20px;
+    }
+    .resume {
+        margin:0 auto 80px auto;
+    }
+    .social {
+        position:static;
+        width:100%;
+        .wrapper {
+            display:block;
+            position:static;
+        }
+    }
+    .header {
+        .contact {
+            left: auto;
+            right:0;
+        }
+        .download-pdf {
+            float:none;
+            position:absolute;
+            width:100%;
+            text-align:center;
+            bottom:-60px;
+        }
+    }
+    .entry {
+        .timeframe {
+            position:static;
+            width:auto;
+            float:right;
+        }
+    }
+}
