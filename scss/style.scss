@@ -35,22 +35,24 @@ a {
     margin-right:em(280);
 }
 
-.social {
+.sidebar {
     .wrapper {
         position:fixed;
+        width:em(200);
     }
     position: absolute;
     width:em(200);
     top:0;
     right:em(-240);
-    ul {
-        list-style:none;
-        font-size:em(13);
-        li {
-            display:inline-block;
-            margin-right:em(2);
-            font-size:(16 / 13) * 1em;
-        }
+}
+
+.social-links {
+    list-style:none;
+    font-size:em(13);
+    li {
+        display:inline-block;
+        margin-right:em(2);
+        font-size:(16 / 13) * 1em;
     }
     a {
         display:inline-block;
