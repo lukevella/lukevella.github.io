@@ -20,7 +20,7 @@ body {
 a {
     color: $blue-clr;
     &:hover {
-        color: lighten($blue-clr, 5%);
+        color: black;
     }
 }
 
@@ -39,6 +39,9 @@ a {
     .wrapper {
         position:fixed;
         width:em(200);
+    }
+    .sidebar-section {
+        margin-bottom: em(20);
     }
     position: absolute;
     width:em(200);
