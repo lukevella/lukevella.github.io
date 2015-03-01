@@ -207,10 +207,19 @@ p {
     font-size: em(13);
     color: $text-clr;
     ul {
+        list-style:square;
         margin-left: em(20);
         margin-bottom:em(10);
         li {
             margin-bottom:em(5);
+        }
+    }
+    a {
+        color: $text-clr;
+        text-decoration:underline;
+        &:hover {
+            color: $blue-clr;
+            text-decoration:underline;
         }
     }
 }
