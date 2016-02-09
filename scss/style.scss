@@ -18,9 +18,10 @@ body {
 }
 
 a {
-  color: $blue-clr;
+  color: shade($light-gray-clr, 20%);
   text-decoration: none;
   &:hover {
+    color: $blue-clr;
     text-decoration: underline;;
   }
 }
@@ -46,7 +47,7 @@ a {
     letter-spacing: -1px;
   }
   .title {
-    color: $blue-clr;
+    color: $light-gray-clr;
     font-weight: bold;
     font-size:em(24);
     line-height: 1em;
@@ -92,7 +93,7 @@ h4 {
       background-size: cover;
     }
     &:hover {
-      color: $blue-clr;
+      color: $light-gray-clr;
       text-decoration: underline;
     }
   }
@@ -118,7 +119,7 @@ p {
   margin-bottom:em(20);
   .timeframe {
     display: inline-block;
-    background: $blue-clr;
+    background: $light-gray-clr;
     color: #FFF;
     padding: 3px 8px;
     border-radius: 10px;
@@ -145,14 +146,6 @@ p {
     margin-bottom:em(10);
     li {
       margin-bottom:em(5);
-    }
-  }
-  a {
-    color: $text-clr;
-    text-decoration:underline;
-    &:hover {
-      color: $blue-clr;
-      text-decoration:underline;
     }
   }
 }

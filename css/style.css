@@ -382,9 +382,10 @@ body {
   color: #4C4D4F; }
 
 a {
-  color: #0064FF;
+  color: #878b94;
   text-decoration: none; }
   a:hover {
+    color: #0064FF;
     text-decoration: underline; }
 
 .container {
@@ -405,7 +406,7 @@ a {
     line-height: 1em;
     letter-spacing: -1px; }
   .header .title {
-    color: #0064FF;
+    color: #A9AEB9;
     font-weight: bold;
     font-size: 1.5em;
     line-height: 1em;
@@ -446,7 +447,7 @@ h4 {
       background: url("../images/external.png") no-repeat;
       background-size: cover; }
     h4 a:hover {
-      color: #0064FF;
+      color: #A9AEB9;
       text-decoration: underline; }
 
 p {
@@ -469,7 +470,7 @@ p {
   margin-bottom: 1.25em; }
   .entry .timeframe {
     display: inline-block;
-    background: #0064FF;
+    background: #A9AEB9;
     color: #FFF;
     padding: 3px 8px;
     border-radius: 10px;
@@ -492,12 +493,6 @@ p {
     margin-bottom: 0.625em; }
     .content ul li {
       margin-bottom: 0.3125em; }
-  .content a {
-    color: #4C4D4F;
-    text-decoration: underline; }
-    .content a:hover {
-      color: #0064FF;
-      text-decoration: underline; }
 
 .sidebar {
   position: absolute;
@@ -523,7 +518,7 @@ p {
     font-size: 18px; }
 
   .resume {
-    margin-left: 5em;
+    margin-left: 6.25em;
     margin-right: 12.5em; } }
 @media screen and (min-width: 800px) and (max-width: 960px) {
   body {
