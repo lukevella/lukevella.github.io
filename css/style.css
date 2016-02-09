@@ -1,4 +1,3 @@
-@import url(http://fonts.googleapis.com/css?family=Roboto:400,500,700);
 /* Neat 1.7.0
  * http://neat.bourbon.io
  * Copyright 2012-2014 thoughtbot, inc.
@@ -379,15 +378,17 @@ ul, ol {
   margin: 0; }
 
 body {
-  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif; }
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #4C4D4F; }
 
 a {
-  color: #049FE2; }
+  color: #0064FF;
+  text-decoration: none; }
   a:hover {
-    color: black; }
+    text-decoration: underline; }
 
 .container {
-  padding: 40px; }
+  padding: 80px 40px; }
 
 .resume {
   position: relative;
@@ -395,57 +396,20 @@ a {
   margin-left: 12.5em;
   margin-right: 17.5em; }
 
-.sidebar {
-  position: absolute;
-  width: 12.5em;
-  top: 0;
-  right: -15em; }
-  .sidebar .wrapper {
-    position: fixed;
-    width: 12.5em; }
-  .sidebar .sidebar-section {
-    margin-bottom: 1.25em; }
-
-.social-links {
-  list-style: none;
-  font-size: 0.8125em; }
-  .social-links li {
-    display: inline-block;
-    margin-right: 0.125em;
-    font-size: 1.23077em; }
-  .social-links a {
-    display: inline-block;
-    width: 2em;
-    height: 2em;
-    background-size: 2em 4em; }
-    .social-links a.linkedin {
-      background-image: url("../images/social/linkedin.png"); }
-    .social-links a.dribbble {
-      background-image: url("../images/social/dribbble.png"); }
-    .social-links a.github {
-      background-image: url("../images/social/github.png"); }
-    .social-links a.twitter {
-      background-image: url("../images/social/twitter.png"); }
-    .social-links a:hover {
-      background-position: 0 -2em; }
-
 .header {
-  margin-top: 2.5em;
   margin-bottom: 2.5em; }
   .header .name {
+    color: #000;
     font-size: 1.5em;
-    font-weight: bold; }
+    font-weight: bold;
+    line-height: 1em;
+    letter-spacing: -1px; }
   .header .title {
-    color: #A9AEB9;
-    font-weight: normal;
-    font-size: 0.875em; }
-  .header .contact {
-    position: absolute;
-    width: 9.375em;
-    left: -11.875em;
-    top: 0;
-    font-size: 0.8125em;
-    text-align: right; }
+    color: #0064FF;
+    font-weight: bold;
+    font-size: 1.5em;
+    line-height: 1em;
+    letter-spacing: -1px; }
   .header .avatar {
     width: 6.25em;
     height: 6.25em;
@@ -456,40 +420,20 @@ a {
     top: -1.25em; }
     .header .avatar img {
       max-width: 100%; }
-  .header .download-pdf {
-    float: right;
-    padding: 0.9375em;
-    border: 2px solid #eee;
-    font-size: 0.8125em;
-    border-radius: 3px;
-    text-decoration: none;
-    color: #A9AEB9; }
-    .header .download-pdf .document {
-      vertical-align: text-top;
-      display: inline-block;
-      width: 1.23077em;
-      height: 1.23077em;
-      background: url("../images/download.png") no-repeat;
-      background-size: 1.23077em 2.46154em;
-      margin-right: 0.3125em; }
-    .header .download-pdf:hover {
-      border-color: #049FE2;
-      color: #049FE2; }
-      .header .download-pdf:hover .document {
-        background-position: 0 -1.23077em; }
 
 .resume-section {
   margin-bottom: 1.875em; }
 
 h3 {
-  color: #049FE2;
+  color: #000;
   font-size: 1.125em;
-  font-weight: 500;
+  font-weight: bold;
   margin-bottom: 0.625em; }
 
 h4 {
-  font-size: 1em;
-  font-weight: 500; }
+  font-size: 0.875em;
+  font-weight: bold;
+  line-height: 1.3em; }
   h4 a {
     color: black;
     text-decoration: none; }
@@ -502,33 +446,37 @@ h4 {
       background: url("../images/external.png") no-repeat;
       background-size: cover; }
     h4 a:hover {
-      color: #049FE2;
+      color: #0064FF;
       text-decoration: underline; }
 
 p {
   margin-bottom: 0.625em;
-  line-height: 1.4em; }
+  line-height: 1.5em; }
 
 .summary {
   font-size: 1.125em;
+  font-weight: 300;
   color: #4C4D4F; }
 
 .subtitle {
   font-size: 0.8125em;
+  line-height: 1.3em;
   color: #A9AEB9;
-  margin-bottom: 0.3125em; }
+  margin-bottom: 10px; }
 
 .entry {
   position: relative;
   margin-bottom: 1.25em; }
   .entry .timeframe {
-    position: absolute;
-    left: -8.75em;
-    top: 0;
     display: inline-block;
-    width: 6.25em;
-    color: #A9AEB9;
-    text-align: right; }
+    background: #0064FF;
+    color: #FFF;
+    padding: 3px 8px;
+    border-radius: 10px;
+    text-align: right;
+    float: right;
+    font-weight: bold;
+    font-size: 0.625em; }
 
 .gallery {
   margin-top: 1.25em; }
@@ -536,7 +484,7 @@ p {
     max-width: 100%; }
 
 .content {
-  font-size: 0.8125em;
+  font-size: 0.875em;
   color: #4C4D4F; }
   .content ul {
     list-style: square;
@@ -548,30 +496,41 @@ p {
     color: #4C4D4F;
     text-decoration: underline; }
     .content a:hover {
-      color: #049FE2;
+      color: #0064FF;
       text-decoration: underline; }
 
-.skills-list {
-  margin-bottom: 1.25em; }
-  .skills-list li {
-    display: inline-block; }
-    .skills-list li:after {
-      content: ','; }
-    .skills-list li:last-child:after {
-      content: '.'; }
+.sidebar {
+  position: absolute;
+  width: 12.5em;
+  top: 0;
+  right: -15em; }
+  .sidebar ul {
+    font-size: 0.875em;
+    list-style-position: inside;
+    list-style-type: square;
+    margin-bottom: 20px;
+    line-height: 1.5em; }
+
+.sidebar-wrapper {
+  position: fixed;
+  width: 12.5em; }
 
 @media screen and (min-width: 1440px) {
   body {
     font-size: 20px; } }
 @media screen and (min-width: 960px) and (max-width: 1440px) {
   body {
-    font-size: 16px; } }
-@media screen and (min-width: 800px) and (max-width: 960px) {
-  body {
-    font-size: 14px; }
+    font-size: 18px; }
 
   .resume {
-    margin-left: 9.375em;
+    margin-left: 5em;
+    margin-right: 12.5em; } }
+@media screen and (min-width: 800px) and (max-width: 960px) {
+  body {
+    font-size: 16px; }
+
+  .resume {
+    margin-left: 2.5em;
     margin-right: 12.5em; } }
 @media screen and (max-width: 800px) {
   body {
@@ -586,7 +545,7 @@ p {
   .sidebar {
     position: static;
     width: 100%; }
-    .sidebar .wrapper {
+    .sidebar .sidebar-wrapper {
       width: 100%;
       display: block;
       position: static; }
